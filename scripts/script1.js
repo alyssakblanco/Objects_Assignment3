@@ -1,5 +1,12 @@
 console.log("working 1");
 
+//associative array
+items = [];
+items["hotdog"] = 4;
+items["fries"] = 3.50;
+items["soda"] = 1.50;
+items["sauerkraut"] = 1;
+
 let hdqty = document.getElementById("hdqty").innerText;
 document.getElementById("hdqty").innerText = 0;
 
@@ -65,14 +72,6 @@ function subSk(){
     if(skqty < 0){ skqty=0; }
     document.getElementById("skqty").innerText = skqty;
 }
-
-
-//associative array
-items = [];
-items["hotdog"] = 4;
-items["fries"] = 3.50;
-items["soda"] = 1.50;
-items["sauerkraut"] = 1;
 
 let total = 0;
 let order = document.getElementById("order");
