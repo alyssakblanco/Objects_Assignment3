@@ -9,14 +9,14 @@ class Item {
         this.total = price * qty;
     }
     show(){
-        return this.name + " qty: " + this.qty + " total: " + this.total;
+        return this.name + " qty: " + this.qty + "</br> $" + this.total+ "</br>";
     }
 }
 
-hotdog = new Item("hotdog", 4, 0);
-fries = new Item("fries", 3.50, 0);
-soda = new Item("soda", 1.50, 0);
-sauerkraut = new Item("sauerkraut", 1, 0);
+hotdog = new Item("Hotdog", 4, 0);
+fries = new Item("Fries", 3.50, 0);
+soda = new Item("Soda", 1.50, 0);
+sauerkraut = new Item("Sauerkraut", 1, 0);
 
 
 document.getElementById("hdqty").innerText = hotdog.qty;
@@ -103,8 +103,8 @@ function displayOrder(total){
                         + fries.show() + "<br />"
                         + soda.show() + "<br />"
                         + sauerkraut.show() + "<br />"
-                        + "Grand total: " + total 
-                        + "</br> <button id='refresh'>Start New Order</button>";
+                        + "<span id='bold'>Total $" + total 
+                        + "</span></br> <button id='refresh'>Start New Order</button>";
 
     let refresh = document.getElementById("refresh");
     refresh.addEventListener("click", startOver);

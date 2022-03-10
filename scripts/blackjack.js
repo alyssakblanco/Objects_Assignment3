@@ -44,12 +44,15 @@ function placeBet(){
 let dealer = document.getElementById("dealer");
 let player = document.getElementById("player");
 
+let gameBoard = document.getElementById("gameBoard");
+
 function start(){
     dCard();
     dCard();
     pCard();
     pCard();
     newGame.style.display = 'none';
+    gameBoard.style.display = 'block';
 }
 
 let suitImg = "";
@@ -92,7 +95,7 @@ document.getElementById("dscore").innerHTML = "Dealer score: " + dscore;
 document.getElementById("pscore").innerHTML = "Player score: " + pscore;
 
 let winDiv = document.getElementById("win");
-winDiv.style.display = "none";
+let modal = document.getElementById("modal");
 
 
 function checkWin(){
@@ -108,10 +111,10 @@ function checkWin(){
     }
 
     if(pscore == 21){
-        winDiv.style.display = "block";
+        modal.style.display = "flex";
         winDiv.innerHTML = "You Won!<button onClick='location.reload();'>Start Over</button>";
     }else if(pscore > 21){
-        winDiv.style.display = "block";
+        modal.style.display = "flex";
         winDiv.innerHTML = "Bust!<button onClick='location.reload();'>Start Over</button>"
     }
 }
@@ -129,10 +132,10 @@ function checkDealer(){
     }
 
     if(dscore == 21){
-        winDiv.style.display = "block";
+        modal.style.display = "flex";
         winDiv.innerHTML = "Dealer Win's!<button onClick='location.reload();'>Start Over</button>";
     }else if(dscore > 21){
-        winDiv.style.display = "block";
+        modal.style.display = "flex";
         winDiv.innerHTML = "Dealer Bust, You Win!<button onClick='location.reload();'>Start Over</button>"
     }
 }

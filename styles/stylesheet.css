@@ -1,54 +1,116 @@
 body{
-    font-family: 'Courier New', Courier, monospace;
-    background-color: aquamarine;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 75%;
+    margin: auto;
+    background-color: #FEF8D9;
+}
+
+h1{
+    color: #B4101C;
+    font-weight: bold;
+}
+h2{
+    color: #B4101C;
+    font-weight: lighter;
+    line-height: 0%;
 }
 
 a{
     display: block;
+    font-size: 1.5rem;
+    line-height: 3rem;
 }
-
-
 
 #content{
     display: flex;
+    margin-top: 3rem;
+    background-color: #FFEBA2;
+    padding: 1rem;
+    border-radius: 15px;
 }
+
 
 #menu{
     width: 60%;
-    background-color: aliceblue;
 }
 .item{
     width: 80%;
     display: flex;
     justify-content: space-between;
+    font-size: 1.5rem;
+    background-color: #FFB042;
+    border-radius: 15px;
+    padding: 1rem;
+    margin-bottom: 1rem;
 }
 .qty{
-    width: 20%;
-    background-color: aquamarine;
+    width: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 .btn{
-    background-color: blueviolet;
-    padding: 5px;
+    background-color: #B4101C;
+    /* padding: 0.5rem; */
     color: white;
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
+    border: none;
+    height: 1.5rem;
+    width: 1.5rem;
+    font-size: .75rem;
 }
 
 #order{
-    width: 80%;
-    margin-top: 2rem;
-    padding: 10px;
+    margin-top: 1rem;
+    padding: 1rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 15px;
     cursor: pointer;
-    background-color: blueviolet;
+    background-color: #B4101C;
     color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
 }
 
 #summary{
     width: 40%;
-    background-color: aliceblue;
+    font-size: 1.5rem;
+}
+#bold{
+    font-weight: bold;
+}
+#refresh{
+    margin-top: 2rem;
+    padding: .75rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    background-color: #B4101C;
+    color: white;
+    font-size: 1rem;
+}
+
+@media only screen and (max-width: 600px) {
+    #content{
+        flex-direction: column;
+    }
+    #menu{
+        width: 100%;
+    }
+    .item{
+        width: 90%;
+    }
+    #summary{
+        margin-top: 3rem;
+        width: 100%;
+    }
+    body{
+        padding-bottom: 3rem;
+    }
+    h2{
+        line-height: 1.5rem;
+    }
+    
 }

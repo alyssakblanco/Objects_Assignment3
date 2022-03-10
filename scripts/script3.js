@@ -103,12 +103,12 @@ function getTotal(){
 
 function displayOrder(a, b, c, d, total){
     let summary = document.getElementById("summary");
-    summary.innerHTML = "hotdog qty: " + hdqty + " total: " + a + "</br>"
-                        + "fries qty: " + fqty + " total: " + b + "</br>"
-                        + "soda qty: " + sqty + " total: " + c + "</br>"
-                        + "sauerkraut qty: " + skqty + " total: " + d + "</br>"
-                        + "Grand total: " + total 
-                        + "</br> <button id='refresh'>Start New Order</button>";
+    summary.innerHTML = "Hotdog qty: " + hdqty + "</br> $" + a + "</br></br>"
+                        + "Fries qty: " + fqty + "</br> $" + b + "</br></br>"
+                        + "Soda qty: " + sqty + "</br> $" + c + "</br></br>"
+                        + "Sauerkraut qty: " + skqty + "</br> $" + d + "</br></br>"
+                        + "<span id='bold'>Total $" + total 
+                        + "</span></br> <button id='refresh'>Start New Order</button>";
 
     let refresh = document.getElementById("refresh");
     refresh.addEventListener("click", startOver);
